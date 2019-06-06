@@ -1,0 +1,55 @@
+﻿@model Client.Data.Models.ContactModel;
+
+@{
+    ViewData["Title"] = "Kontakt";
+}
+
+@section Scripts {
+    <environment include="Development">
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"
+                asp-fallback-src="~/lib/jquery-validation/dist/jquery.validate.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.validator"
+                crossorigin="anonymous"
+                integrity="sha256-F6h55Qw6sweK+t7SiOJX+2bpSAa3b/fnlrVCJvmEj1A=">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"
+                asp-fallback-src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive"
+                crossorigin="anonymous"
+                integrity="sha256-9GycpJnliUjJDVDqP0UEu/bsm9U+3dnQUH8+3W10vkY=">
+        </script>
+    </environment>
+}
+
+
+<main role="main" class="container h-75">
+    <div class="row h-100 justify-content-center align-items-center">
+        <form method="post" asp-area="" asp-controller="Home" asp-action="SendMessage">
+            <div class="form-group">
+                <label for="inputEmail">Adres email</label>
+                <input asp-for="Sender" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Podaj email">
+                <small id="emailHelp" class="form-text text-muted">Podaj swój adres email na który przyślę odpowiedź na twoje pytanie.</small>
+                <span asp-validation-for="Sender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="inputTopic">Temat wiadomości</label>
+                <input asp-for="Topic" type="text" class="form-control" id="inputTopic" aria-describedby="topicHelp" placeholder="Podaj temat wiadomości">
+                <small id="topicHelp" class="form-text text-muted">Podaj temat wiadomości.</small>
+                <span asp-validation-for="Topic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="messageArea">Wiadomość</label>
+                <textarea asp-for="Message" class="form-control" id="messageArea" rows="5"></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary text-center">Wyślij</button>
+        </form>
+    </div>
+</main>
+
+<canvas id="canvas"></canvas>
+<script src="~/js/points.es5.min.js"></script>
