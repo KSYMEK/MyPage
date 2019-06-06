@@ -1,13 +1,13 @@
-﻿using System.Diagnostics;
-using System.Net;
-using System.Net.Mail;
-using System.Threading.Tasks;
-using Client.Data.Models;
-using Client.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
+﻿namespace Client.Controllers {
+    using System.Diagnostics;
+    using System.Net;
+    using System.Net.Mail;
+    using System.Threading.Tasks;
+    using Data.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Options;
+    using Models;
 
-namespace Client.Controllers {
     [Route("[action]")]
     public class HomeController : Controller {
         private readonly IOptions<EmailSecrets> _emailSecrets;

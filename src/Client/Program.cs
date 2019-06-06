@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
+﻿namespace Client {
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Hosting;
 
-namespace Client {
     public class Program {
         public static void Main(string[] args) {
             CreateWebHostBuilder(args).Build().Run();

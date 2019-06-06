@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿namespace Client.Data.Models {
+    using System.ComponentModel.DataAnnotations;
 
-namespace Client.Data.Models {
     public class ContactModel {
         [Required]
         [EmailAddress(ErrorMessage = "Pole powinno zawierać poprawny adres email.")]
