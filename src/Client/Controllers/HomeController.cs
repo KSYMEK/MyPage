@@ -1,4 +1,5 @@
 ﻿namespace Client.Controllers {
+    using System;
     using System.Diagnostics;
     using System.Net;
     using System.Net.Mail;
@@ -21,8 +22,22 @@
             return View();
         }
 
+
         [HttpGet("/kontakt")]
         public IActionResult Contact() {
+            return View();
+        }
+
+        [HttpGet("/kontakt/powiadomienie")]
+        public IActionResult MessageResponse([FromQuery(Name = "Powodzenie")] bool? isSent = null) {
+            if (isSent == null) return RedirectToAction("Contact");
+
+            ViewData["IsSent"] = isSent;
+            return View();
+        }
+
+        [HttpGet("/o-mnie")]
+        public IActionResult About() {
             return View();
         }
 
@@ -35,14 +50,19 @@
                 Credentials = new NetworkCredential(_emailSecrets.Value.Login, _emailSecrets.Value.Password)
             };
 
-            using (var message = new MailMessage(_emailSecrets.Value.Login, "kacper.szymczuch@gmail.com") {
-                Subject = model.Topic + " " + model.Sender,
-                Body = model.Message
-            }) {
-                await smtpClient.SendMailAsync(message);
+            try {
+                using (var message = new MailMessage(_emailSecrets.Value.Login, "kacper.szymczuch@gmail.com") {
+                    Subject = model.Topic + " - od " + model.Sender,
+                    Body = model.Message
+                }) {
+                    await smtpClient.SendMailAsync(message);
+                }
+            }
+            catch (Exception) {
+                return RedirectToAction("MessageResponse", new {Powodzenie = true});
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("MessageResponse", new {Powodzenie = true});
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

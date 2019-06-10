@@ -26,9 +26,9 @@
 }
 
 
-<main role="main" class="container h-75">
-    <div class="row h-100 justify-content-center align-items-center">
-        <form method="post" asp-area="" asp-controller="Home" asp-action="SendMessage">
+<main role="main" class="container full-page">
+    <div class="row">
+        <form class="col-lg-6 offset-lg-3 col-sm-12" method="post" asp-area="" asp-controller="Home" asp-action="SendMessage">
             <div class="form-group">
                 <label for="inputEmail">Adres email</label>
                 <input asp-for="Sender" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Podaj email">

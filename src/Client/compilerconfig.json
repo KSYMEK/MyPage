@@ -1,7 +1,8 @@
 ﻿[
   {
     "outputFile": "wwwroot/css/site.css",
-    "inputFile": "wwwroot/sass/site.scss"
+    "inputFile": "wwwroot/sass/site.scss",
+    "sourceMap": true
   },
   {
     "outputFile": "wwwroot/js/points.es5.js",

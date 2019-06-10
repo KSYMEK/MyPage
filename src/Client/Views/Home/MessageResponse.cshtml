@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Kontakt";
+}
+
+
+<div style="margin-bottom: 20%; margin-top: 20%;" class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            @if ((bool) ViewData["IsSent"]) {
+                <div class="alert alert-success">
+                    <strong>Wysłane! </strong> Wiadomość wysłana pomyślnie. Odpowiem na nią najszybciej jak się da!
+                </div>
+            }
+            else {
+                <div class="alert alert-danger">
+                    <strong>Błąd! </strong> Coś poszło nie tak jak trzeba. Spróbuj ponownie za chwilę.
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<canvas id="canvas"></canvas>
+<script src="~/js/points.es5.min.js"></script>

@@ -32,49 +32,53 @@
 
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-md navbar-fixed-top main-nav">
-        <div class="container">
-            <ul class="nav navbar-nav">
-                <li class="nav-item active">
-                    <a target="_blank" class="nav-link" href="https://twitter.com/KSYMEK">Twitter</a>
-                </li>
-                <li class="nav-item">
-                    <a target="_blank" class="nav-link" href="#">Youtube</a>
-                </li>
-                <li class="nav-item">
-                    <a target="_blank" class="nav-link" href="#">Blog</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link" style="@OpenedPage("Strona Główna")">Strona główna</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav">
-                <li class="nav-item">
-                    <a style="@OpenedPage("Oferta")" class="nav-link" href="#">Oferta</a>
-                </li>
-                <li class="nav-item">
-                    <a style="@OpenedPage("O mnie")" class="nav-link" href="#">O mnie</a>
-                </li>
-                <li class="nav-item">
-                    <a asp-area="" asp-controller="Home" asp-action="Contact" style="@OpenedPage("Kontakt")" class="nav-link">Kontakt</a>
-                </li>
-            </ul>
+
+<div class="container-fluid">
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active">
+                        <a target="_blank" class="nav-link" href="https://twitter.com/KSYMEK">Twitter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" class="nav-link" href="#">Youtube</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Blog" asp-action="Index" target="_blank" class="nav-link">Blog</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link" style="@OpenedPage("Strona Główna")">Strona główna</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a style="@OpenedPage("Oferta")" class="nav-link" href="#">Oferta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Home" asp-action="About" style="@OpenedPage("O mnie")" class="nav-link">O mnie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Contact" style="@OpenedPage("Kontakt")" class="nav-link">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    @RenderBody()
+
+    <footer class="row">
+        <div class="col-12 text-center text-muted">
+            Kacper Szymczuch - &copy; @DateTime.Now.Year
         </div>
-    </nav>
-</header>
-
-@RenderBody()
-
-<partial name="_CookieConsentPartial"/>
-
-<footer class="footer text-muted">
-    <div class="container text-center">
-        &copy; @DateTime.Now.Year - Kacper Szymczuch
-    </div>
-</footer>
+    </footer>
+</div>
 
 <environment include="Development">
     <script src="~/lib/jquery/dist/jquery.js"></script>
