@@ -1,124 +1,116 @@
 ﻿@font-face {
-    font-family: 'Myriad Pro Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local("Myriad Pro Regular"), url("../fonts/MYRIADPRO-REGULAR.woff") format("woff");
-}
+  font-family: 'Myriad Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Regular"), url("../fonts/MYRIADPRO-REGULAR.woff") format("woff"); }
 
 @font-face {
-    font-family: 'Myriad Pro Condensed';
-    font-style: normal;
-    font-weight: normal;
-    src: local("Myriad Pro Condensed"), url("../fonts/MYRIADPRO-COND.woff") format("woff");
-}
+  font-family: 'Myriad Pro Condensed';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Condensed"), url("../fonts/MYRIADPRO-COND.woff") format("woff"); }
 
 @font-face {
-    font-family: 'Myriad Pro Condensed Italic';
-    font-style: italic;
-    font-weight: normal;
-    src: local("Myriad Pro Condensed Italic"), url("../fonts/MYRIADPRO-CONDIT.woff") format("woff");
-}
+  font-family: 'Myriad Pro Condensed Italic';
+  font-style: italic;
+  font-weight: normal;
+  src: local("Myriad Pro Condensed Italic"), url("../fonts/MYRIADPRO-CONDIT.woff") format("woff"); }
 
 @font-face {
-    font-family: 'Myriad Pro Light';
-    font-style: normal;
-    font-weight: lighter;
-    src: local("Myriad Pro Light"), url("../fonts/MyriadPro-Light.woff") format("woff");
-}
+  font-family: 'Myriad Pro Light';
+  font-style: normal;
+  font-weight: lighter;
+  src: local("Myriad Pro Light"), url("../fonts/MyriadPro-Light.woff") format("woff"); }
 
 @font-face {
-    font-family: 'Myriad Pro Semibold';
-    font-style: normal;
-    font-weight: normal;
-    src: local("Myriad Pro Semibold"), url("../fonts/MYRIADPRO-SEMIBOLD.woff") format("woff");
-}
+  font-family: 'Myriad Pro Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Semibold"), url("../fonts/MYRIADPRO-SEMIBOLD.woff") format("woff"); }
 
 @font-face {
-    font-family: 'Myriad Pro Semibold Italic';
-    font-style: italic;
-    font-weight: bolder;
-    src: local("Myriad Pro Semibold Italic"), url("../fonts/MYRIADPRO-SEMIBOLDIT.woff") format("woff");
-}
+  font-family: 'Myriad Pro Semibold Italic';
+  font-style: italic;
+  font-weight: bolder;
+  src: local("Myriad Pro Semibold Italic"), url("../fonts/MYRIADPRO-SEMIBOLDIT.woff") format("woff"); }
 
 @font-face {
-    font-family: 'Myriad Pro Bold Condensed';
-    font-style: normal;
-    font-weight: bold;
-    src: local("Myriad Pro Bold Condensed"), url("../fonts/MYRIADPRO-BOLDCOND.woff") format("woff");
-}
+  font-family: 'Myriad Pro Bold Condensed';
+  font-style: normal;
+  font-weight: bold;
+  src: local("Myriad Pro Bold Condensed"), url("../fonts/MYRIADPRO-BOLDCOND.woff") format("woff"); }
 
 @font-face {
-    font-family: 'Myriad Pro Bold';
-    font-style: normal;
-    font-weight: bold;
-    src: local("Myriad Pro Bold"), url("../fonts/MYRIADPRO-BOLD.woff") format("woff");
-}
+  font-family: 'Myriad Pro Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: local("Myriad Pro Bold"), url("../fonts/MYRIADPRO-BOLD.woff") format("woff"); }
 
 @font-face {
-    font-family: 'Myriad Pro Bold Italic';
-    font-style: italic;
-    font-weight: bold;
-    src: local("Myriad Pro Bold Italic"), url("../fonts/MYRIADPRO-BOLDIT.woff") format("woff");
-}
+  font-family: 'Myriad Pro Bold Italic';
+  font-style: italic;
+  font-weight: bold;
+  src: local("Myriad Pro Bold Italic"), url("../fonts/MYRIADPRO-BOLDIT.woff") format("woff"); }
 
 @font-face {
-    font-family: 'Myriad Pro Bold Condensed Italic';
-    font-style: italic;
-    font-weight: bold;
-    src: local("Myriad Pro Bold Condensed Italic"), url("../fonts/MYRIADPRO-BOLDCONDIT.woff") format("woff");
-}
+  font-family: 'Myriad Pro Bold Condensed Italic';
+  font-style: italic;
+  font-weight: bold;
+  src: local("Myriad Pro Bold Condensed Italic"), url("../fonts/MYRIADPRO-BOLDCONDIT.woff") format("woff"); }
 
 body, html {
-    background-color: #0B132B;
-    color: #FFFFFF;
-    font-family: 'Myriad Pro Regular', sans-serif;
-    height: 100%;
-    z-index: 0;
-}
+  font-family: 'Myriad Pro Regular', sans-serif;
+  height: 100%;
+  background-color: #0B132B;
+  color: #FFFFFF;
+  z-index: 0; }
 
 h1 {
-    font-family: 'Myriad Pro Light', sans-serif;
-    font-size: 4rem;
-}
+  font-family: 'Myriad Pro Light', sans-serif;
+  font-size: 4rem; }
 
 #canvas {
-    height: 100%;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-}
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
 
 main {
-    position: relative;
-    z-index: 2;
-}
+  position: relative;
+  z-index: 2; }
 
 nav {
-    color: #FFFFFF;
-    z-index: 1;
-}
+  z-index: 1;
+  color: #FFFFFF; }
 
-a { color: #FFFFFF; }
+a {
+  color: #FFFFFF; }
 
-a:hover { color: #5BC0BE; }
+a:hover {
+  color: #5BC0BE; }
 
 .border-left-overwrite {
-    border-left: 3px solid #6FFFE9;
-    padding-bottom: 10px;
-    padding-left: 10px;
-}
+  border-left: 3px solid #6FFFE9;
+  padding-left: 10px;
+  padding-bottom: 10px; }
 
-.navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(111,255,233, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(111,255,233, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
 
-button { border: none; }
+button {
+  border: none; }
 
-footer { z-index: 2; }
+footer {
+  z-index: 2; }
 
 .full-page {
-    margin-bottom: 10%;
-    margin-top: 10%;
-}
+  margin-top: 10%;
+  margin-bottom: 10%; }
 
-/*# sourceMappingURL=data:application/json;base64,ewoJInZlcnNpb24iOiAzLAoJImZpbGUiOiAid3d3cm9vdC9zYXNzL3NpdGUuY3NzIiwKCSJzb3VyY2VzIjogWwoJCSJ3d3dyb290L3Nhc3Mvc2l0ZS5zY3NzIiwKCQkid3d3cm9vdC9zYXNzL2ZvbnRzLnNjc3MiCgldLAoJIm5hbWVzIjogW10sCgkibWFwcGluZ3MiOiAiQUNBQSxVQUFVO0VBQ04sV0FBVyxFQUFFLG9CQUFvQjtFQUNqQyxVQUFVLEVBQUUsTUFBTTtFQUNsQixXQUFXLEVBQUUsTUFBTTtFQUNuQixHQUFHLEVBQUUsMkJBQTJCLEVBQUUsc0NBQXNDLENBQUMsY0FBYzs7QUFJM0YsVUFBVTtFQUNOLFdBQVcsRUFBRSxzQkFBc0I7RUFDbkMsVUFBVSxFQUFFLE1BQU07RUFDbEIsV0FBVyxFQUFFLE1BQU07RUFDbkIsR0FBRyxFQUFFLDZCQUE2QixFQUFFLG1DQUFtQyxDQUFDLGNBQWM7O0FBSTFGLFVBQVU7RUFDTixXQUFXLEVBQUUsNkJBQTZCO0VBQzFDLFVBQVUsRUFBRSxNQUFNO0VBQ2xCLFdBQVcsRUFBRSxNQUFNO0VBQ25CLEdBQUcsRUFBRSxvQ0FBb0MsRUFBRSxxQ0FBcUMsQ0FBQyxjQUFjOztBQUluRyxVQUFVO0VBQ04sV0FBVyxFQUFFLGtCQUFrQjtFQUMvQixVQUFVLEVBQUUsTUFBTTtFQUNsQixXQUFXLEVBQUUsT0FBTztFQUNwQixHQUFHLEVBQUUseUJBQXlCLEVBQUUsb0NBQW9DLENBQUMsY0FBYzs7QUFJdkYsVUFBVTtFQUNOLFdBQVcsRUFBRSxxQkFBcUI7RUFDbEMsVUFBVSxFQUFFLE1BQU07RUFDbEIsV0FBVyxFQUFFLE1BQU07RUFDbkIsR0FBRyxFQUFFLDRCQUE0QixFQUFFLHVDQUF1QyxDQUFDLGNBQWM7O0FBSTdGLFVBQVU7RUFDTixXQUFXLEVBQUUsNEJBQTRCO0VBQ3pDLFVBQVUsRUFBRSxNQUFNO0VBQ2xCLFdBQVcsRUFBRSxNQUFNO0VBQ25CLEdBQUcsRUFBRSxtQ0FBbUMsRUFBRSx5Q0FBeUMsQ0FBQyxjQUFjOztBQUl0RyxVQUFVO0VBQ04sV0FBVyxFQUFFLDJCQUEyQjtFQUN4QyxVQUFVLEVBQUUsTUFBTTtFQUNsQixXQUFXLEVBQUUsSUFBSTtFQUNqQixHQUFHLEVBQUUsa0NBQWtDLEVBQUUsdUNBQXVDLENBQUMsY0FBYzs7QUFJbkcsVUFBVTtFQUNOLFdBQVcsRUFBRSxpQkFBaUI7RUFDOUIsVUFBVSxFQUFFLE1BQU07RUFDbEIsV0FBVyxFQUFFLElBQUk7RUFDakIsR0FBRyxFQUFFLHdCQUF3QixFQUFFLG1DQUFtQyxDQUFDLGNBQWM7O0FBSXJGLFVBQVU7RUFDTixXQUFXLEVBQUUsd0JBQXdCO0VBQ3JDLFVBQVUsRUFBRSxNQUFNO0VBQ2xCLFdBQVcsRUFBRSxJQUFJO0VBQ2pCLEdBQUcsRUFBRSwrQkFBK0IsRUFBRSxxQ0FBcUMsQ0FBQyxjQUFjOztBQUk5RixVQUFVO0VBQ04sV0FBVyxFQUFFLGtDQUFrQztFQUMvQyxVQUFVLEVBQUUsTUFBTTtFQUNsQixXQUFXLEVBQUUsSUFBSTtFQUNqQixHQUFHLEVBQUUseUNBQXlDLEVBQUUseUNBQXlDLENBQUMsY0FBYzs7QUQxRTVHLEFBQUEsSUFBSSxFQUFFLEFBQUEsSUFBSSxDQUFDO0VBQ1AsV0FBVyxFQUFFLGdDQUFnQztFQUM3QyxNQUFNLEVBQUUsSUFBSTtFQUNaLGdCQUFnQixFQUFFLE9BQU87RUFDekIsS0FBSyxFQUFFLE9BQU87RUFDZCxPQUFPLEVBQUUsQ0FBQyxHQUNiOztBQUVELEFBQUEsRUFBRSxDQUFDO0VBQ0MsV0FBVyxFQUFFLDhCQUE4QjtFQUMzQyxTQUFTLEVBQUUsSUFBSSxHQUNsQjs7QUFFRCxBQUFBLE9BQU8sQ0FBQztFQUNKLFFBQVEsRUFBRSxLQUFLO0VBQ2YsR0FBRyxFQUFFLENBQUM7RUFDTixLQUFLLEVBQUUsQ0FBQztFQUNSLEtBQUssRUFBRSxJQUFJO0VBQ1gsTUFBTSxFQUFFLElBQUk7RUFDWixPQUFPLEVBQUUsQ0FBQyxHQUNiOztBQUVELEFBQUEsSUFBSSxDQUFDO0VBQ0QsUUFBUSxFQUFFLFFBQVE7RUFDbEIsT0FBTyxFQUFFLENBQUMsR0FDYjs7QUFFRCxBQUFBLEdBQUcsQ0FBQztFQUNBLE9BQU8sRUFBRSxDQUFDO0VBQ1YsS0FBSyxFQUFFLE9BQU8sR0FDakI7O0FBRUQsQUFBQSxDQUFDLENBQUM7RUFDRSxLQUFLLEVBQUUsT0FBTyxHQUNqQjs7QUFFRCxBQUFBLENBQUMsQUFBQSxNQUFNLENBQUM7RUFDSixLQUFLLEVBQUUsT0FBTyxHQUNqQjs7QUFFRCxBQUFBLHNCQUFzQixDQUFDO0VBQ25CLFdBQVcsRUFBRSxpQkFBaUI7RUFDOUIsWUFBWSxFQUFFLElBQUk7RUFDbEIsY0FBYyxFQUFFLElBQUksR0FDdkI7O0FBRUQsQUFBQSxvQkFBb0IsQ0FBQztFQUNqQixnQkFBZ0IsRUFBRSxxUEFBcVAsR0FDMVE7O0FBRUQsQUFBQSxNQUFNLENBQUM7RUFDSCxNQUFNLEVBQUUsSUFBSSxHQUNmOztBQUVELEFBQUEsTUFBTSxDQUFDO0VBQ0gsT0FBTyxFQUFFLENBQUMsR0FDYjs7QUFFRCxBQUFBLFVBQVUsQ0FBQztFQUNQLFVBQVUsRUFBRSxHQUFHO0VBQ2YsYUFBYSxFQUFFLEdBQUcsR0FDckIiCn0= */
+.list-group-item {
+  background-color: #1C2541;
+  font-family: 'Myriad Pro Light'; }
+
+/*# sourceMappingURL=data:application/json;base64,ewoJInZlcnNpb24iOiAzLAoJImZpbGUiOiAid3d3cm9vdC9zYXNzL3NpdGUuY3NzIiwKCSJzb3VyY2VzIjogWwoJCSJ3d3dyb290L3Nhc3Mvc2l0ZS5zY3NzIiwKCQkid3d3cm9vdC9zYXNzL2ZvbnRzLnNjc3MiCgldLAoJIm5hbWVzIjogW10sCgkibWFwcGluZ3MiOiAiQUNBQSxVQUFVO0VBQ04sV0FBVyxFQUFFLG9CQUFvQjtFQUNqQyxVQUFVLEVBQUUsTUFBTTtFQUNsQixXQUFXLEVBQUUsTUFBTTtFQUNuQixHQUFHLEVBQUUsMkJBQTJCLEVBQUUsc0NBQXNDLENBQUMsY0FBYzs7QUFJM0YsVUFBVTtFQUNOLFdBQVcsRUFBRSxzQkFBc0I7RUFDbkMsVUFBVSxFQUFFLE1BQU07RUFDbEIsV0FBVyxFQUFFLE1BQU07RUFDbkIsR0FBRyxFQUFFLDZCQUE2QixFQUFFLG1DQUFtQyxDQUFDLGNBQWM7O0FBSTFGLFVBQVU7RUFDTixXQUFXLEVBQUUsNkJBQTZCO0VBQzFDLFVBQVUsRUFBRSxNQUFNO0VBQ2xCLFdBQVcsRUFBRSxNQUFNO0VBQ25CLEdBQUcsRUFBRSxvQ0FBb0MsRUFBRSxxQ0FBcUMsQ0FBQyxjQUFjOztBQUluRyxVQUFVO0VBQ04sV0FBVyxFQUFFLGtCQUFrQjtFQUMvQixVQUFVLEVBQUUsTUFBTTtFQUNsQixXQUFXLEVBQUUsT0FBTztFQUNwQixHQUFHLEVBQUUseUJBQXlCLEVBQUUsb0NBQW9DLENBQUMsY0FBYzs7QUFJdkYsVUFBVTtFQUNOLFdBQVcsRUFBRSxxQkFBcUI7RUFDbEMsVUFBVSxFQUFFLE1BQU07RUFDbEIsV0FBVyxFQUFFLE1BQU07RUFDbkIsR0FBRyxFQUFFLDRCQUE0QixFQUFFLHVDQUF1QyxDQUFDLGNBQWM7O0FBSTdGLFVBQVU7RUFDTixXQUFXLEVBQUUsNEJBQTRCO0VBQ3pDLFVBQVUsRUFBRSxNQUFNO0VBQ2xCLFdBQVcsRUFBRSxNQUFNO0VBQ25CLEdBQUcsRUFBRSxtQ0FBbUMsRUFBRSx5Q0FBeUMsQ0FBQyxjQUFjOztBQUl0RyxVQUFVO0VBQ04sV0FBVyxFQUFFLDJCQUEyQjtFQUN4QyxVQUFVLEVBQUUsTUFBTTtFQUNsQixXQUFXLEVBQUUsSUFBSTtFQUNqQixHQUFHLEVBQUUsa0NBQWtDLEVBQUUsdUNBQXVDLENBQUMsY0FBYzs7QUFJbkcsVUFBVTtFQUNOLFdBQVcsRUFBRSxpQkFBaUI7RUFDOUIsVUFBVSxFQUFFLE1BQU07RUFDbEIsV0FBVyxFQUFFLElBQUk7RUFDakIsR0FBRyxFQUFFLHdCQUF3QixFQUFFLG1DQUFtQyxDQUFDLGNBQWM7O0FBSXJGLFVBQVU7RUFDTixXQUFXLEVBQUUsd0JBQXdCO0VBQ3JDLFVBQVUsRUFBRSxNQUFNO0VBQ2xCLFdBQVcsRUFBRSxJQUFJO0VBQ2pCLEdBQUcsRUFBRSwrQkFBK0IsRUFBRSxxQ0FBcUMsQ0FBQyxjQUFjOztBQUk5RixVQUFVO0VBQ04sV0FBVyxFQUFFLGtDQUFrQztFQUMvQyxVQUFVLEVBQUUsTUFBTTtFQUNsQixXQUFXLEVBQUUsSUFBSTtFQUNqQixHQUFHLEVBQUUseUNBQXlDLEVBQUUseUNBQXlDLENBQUMsY0FBYzs7QUQxRTVHLEFBQUEsSUFBSSxFQUFFLEFBQUEsSUFBSSxDQUFDO0VBQ1AsV0FBVyxFQUFFLGdDQUFnQztFQUM3QyxNQUFNLEVBQUUsSUFBSTtFQUNaLGdCQUFnQixFQUFFLE9BQU87RUFDekIsS0FBSyxFQUFFLE9BQU87RUFDZCxPQUFPLEVBQUUsQ0FBQyxHQUNiOztBQUVELEFBQUEsRUFBRSxDQUFDO0VBQ0MsV0FBVyxFQUFFLDhCQUE4QjtFQUMzQyxTQUFTLEVBQUUsSUFBSSxHQUNsQjs7QUFFRCxBQUFBLE9BQU8sQ0FBQztFQUNKLFFBQVEsRUFBRSxLQUFLO0VBQ2YsR0FBRyxFQUFFLENBQUM7RUFDTixLQUFLLEVBQUUsQ0FBQztFQUNSLEtBQUssRUFBRSxJQUFJO0VBQ1gsTUFBTSxFQUFFLElBQUk7RUFDWixPQUFPLEVBQUUsQ0FBQyxHQUNiOztBQUVELEFBQUEsSUFBSSxDQUFDO0VBQ0QsUUFBUSxFQUFFLFFBQVE7RUFDbEIsT0FBTyxFQUFFLENBQUMsR0FDYjs7QUFFRCxBQUFBLEdBQUcsQ0FBQztFQUNBLE9BQU8sRUFBRSxDQUFDO0VBQ1YsS0FBSyxFQUFFLE9BQU8sR0FDakI7O0FBRUQsQUFBQSxDQUFDLENBQUM7RUFDRSxLQUFLLEVBQUUsT0FBTyxHQUNqQjs7QUFFRCxBQUFBLENBQUMsQUFBQSxNQUFNLENBQUM7RUFDSixLQUFLLEVBQUUsT0FBTyxHQUNqQjs7QUFFRCxBQUFBLHNCQUFzQixDQUFDO0VBQ25CLFdBQVcsRUFBRSxpQkFBaUI7RUFDOUIsWUFBWSxFQUFFLElBQUk7RUFDbEIsY0FBYyxFQUFFLElBQUksR0FDdkI7O0FBRUQsQUFBQSxvQkFBb0IsQ0FBQztFQUNqQixnQkFBZ0IsRUFBRSxxUEFBcVAsR0FDMVE7O0FBRUQsQUFBQSxNQUFNLENBQUM7RUFDSCxNQUFNLEVBQUUsSUFBSSxHQUNmOztBQUVELEFBQUEsTUFBTSxDQUFDO0VBQ0gsT0FBTyxFQUFFLENBQUMsR0FDYjs7QUFFRCxBQUFBLFVBQVUsQ0FBQztFQUNQLFVBQVUsRUFBRSxHQUFHO0VBQ2YsYUFBYSxFQUFFLEdBQUcsR0FDckI7O0FBRUQsQUFBQSxnQkFBZ0IsQ0FBQztFQUNiLGdCQUFnQixFQUFFLE9BQU87RUFDekIsV0FBVyxFQUFFLGtCQUFrQixHQUNsQyIKfQ== */

@@ -22,7 +22,6 @@
             return View();
         }
 
-
         [HttpGet("/kontakt")]
         public IActionResult Contact() {
             return View();
@@ -38,6 +37,11 @@
 
         [HttpGet("/o-mnie")]
         public IActionResult About() {
+            return View();
+        }
+
+        [HttpGet("/oferta")]
+        public IActionResult Offer() {
             return View();
         }
 
