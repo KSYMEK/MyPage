@@ -7,7 +7,6 @@
     <meta name="author" content="Kacper Szymczuch" />
     <meta name="description" content="@ViewData["Description"]">
     <link rel="apple-touch-icon" href="~/img/apple-touch-icon.png" />
-    <link rel="manifest" href="~/site.webmanifest">
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -19,6 +18,7 @@
               crossorigin="anonymous"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
+    <link rel="stylesheet" href="~/css/all.min.css"/>
     <link rel="stylesheet" href="~/css/site.min.css" />
 
     @functions {
@@ -38,36 +38,36 @@
 
 <div class="container-fluid">
     <header>
-        <nav class="navbar navbar-expand-lg text-center" data-sidebarClass="navbar">
+        <nav class="navbar navbar-expand-md text-center" data-sidebarClass="navbar">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="False" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav">
                     <li class="nav-item active">
-                        <a target="_blank" class="nav-link" href="https://twitter.com/KSYMEK">Twitter</a>
+                        <a target="_blank" class="nav-link" href="https://twitter.com/KSYMEK"><i class="fab fa-twitter"></i> Twitter</a>
                     </li>
                     <li class="nav-item">
-                        <a target="_blank" class="nav-link" href="#">Youtube</a>
+                        <a target="_blank" class="nav-link" href="https://github.com/ksymek"><i class="fab fa-github"></i> Github</a>
                     </li>
                     <li class="nav-item">
-                        <a asp-controller="Blog" asp-action="Index" target="_blank" class="nav-link">Blog</a>
+                        <a asp-controller="Blog" asp-action="Index" target="_blank" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link" style="@OpenedPage("Strona Główna")">Strona główna</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link" style="@OpenedPage("Strona Główna")"><i class="fas fa-home"></i> Strona główna</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a asp-controller="Home" asp-action="Offer" style="@OpenedPage("Oferta")" class="nav-link">Oferta</a>
+                        <a asp-controller="Home" asp-action="Offer" style="@OpenedPage("Oferta")" class="nav-link"><i class="fab fa-buffer"></i> Oferta</a>
                     </li>
                     <li class="nav-item">
-                        <a asp-controller="Home" asp-action="About" style="@OpenedPage("O mnie")" class="nav-link">O mnie</a>
+                        <a asp-controller="Home" asp-action="About" style="@OpenedPage("O mnie")" class="nav-link"><i class="far fa-address-card"></i> O mnie</a>
                     </li>
                     <li class="nav-item">
-                        <a asp-controller="Home" asp-action="Contact" style="@OpenedPage("Kontakt")" class="nav-link">Kontakt</a>
+                        <a asp-controller="Home" asp-action="Contact" style="@OpenedPage("Kontakt")" class="nav-link"><i class="fas fa-envelope-open"></i> Kontakt</a>
                     </li>
                 </ul>
             </div>
@@ -76,6 +76,7 @@
 
     @RenderBody()
 
+    <partial name="_CookieConsentPartial"/>
     <footer class="row">
         <div class="col-12 text-center text-muted">
             Kacper Szymczuch - &copy; @DateTime.Now.Year
