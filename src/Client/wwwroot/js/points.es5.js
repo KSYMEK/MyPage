@@ -8,14 +8,14 @@ canvas.height = window.innerHeight;
 
 var stars = [],
     // Array that contains the stars
-    FPS = 60,
+FPS = 60,
     // Frames per second
-    x = 60,
+x = 40,
     // Number of stars
-    mouse = {
-        x: 0,
-        y: 0
-    }; // mouse location
+mouse = {
+    x: 0,
+    y: 0
+}; // mouse location
 
 // Push stars to array
 
@@ -91,11 +91,10 @@ function update() {
     }
 }
 
-canvas.addEventListener("mousemove",
-    function(e) {
-        mouse.x = e.clientX;
-        mouse.y = e.clientY;
-    });
+canvas.addEventListener("mousemove", function (e) {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+});
 
 // Update and draw
 
@@ -116,3 +115,4 @@ var TxtRotate = function TxtRotate(el, toRotate, period) {
     this.tick();
     this.isDeleting = false;
 };
+
