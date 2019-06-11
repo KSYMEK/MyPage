@@ -1,1 +1,1 @@
-MyPage
+Showcast page with my own blog implementation.
