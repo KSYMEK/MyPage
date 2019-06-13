@@ -4,7 +4,6 @@
     using System.Net;
     using System.Net.Mail;
     using System.Threading.Tasks;
-    using Data.Models;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Options;
     using Models;

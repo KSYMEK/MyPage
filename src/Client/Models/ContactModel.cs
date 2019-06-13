@@ -1,4 +1,4 @@
-﻿namespace Client.Data.Models {
+﻿namespace Client.Models {
     using System.ComponentModel.DataAnnotations;
 
     public class ContactModel {

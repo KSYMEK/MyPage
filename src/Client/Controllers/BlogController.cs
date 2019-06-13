@@ -3,7 +3,7 @@
 
     [Route("[controller]/[action]")]
     public class BlogController : Controller {
-        public bool IsMaintenanceBreak { get; set; } = true;
+        public bool IsMaintenanceBreak { get; set; } = false;
 
         [HttpGet("/blog")]
         public IActionResult Index() {

@@ -19,6 +19,8 @@
 
 
   <ItemGroup>
+    <Folder Include="Data\Models\" />
+    <Folder Include="Views\Management\" />
     <Folder Include="wwwroot\fonts\" />
   </ItemGroup>
 
