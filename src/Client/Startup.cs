@@ -26,8 +26,6 @@
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.Configure<EmailSecrets>(Configuration.GetSection("emailDetails"));
-
             //services.AddDbContext<ApplicationDbContext>(options =>
             //    options.UseSqlServer(
             //        Configuration.GetConnectionString("DefaultConnection")));

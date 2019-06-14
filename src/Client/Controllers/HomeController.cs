@@ -5,15 +5,18 @@
     using System.Net.Mail;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Options;
+    using Microsoft.Extensions.Configuration;
     using Models;
 
     [Route("[action]")]
     public class HomeController : Controller {
-        private readonly IOptions<EmailSecrets> _emailSecrets;
+        private readonly EmailSecrets _emailSecrets;
 
-        public HomeController(IOptions<EmailSecrets> emailSecrets) {
-            _emailSecrets = emailSecrets;
+        public HomeController(IConfiguration configuration) {
+            _emailSecrets = new EmailSecrets {
+                Login = configuration["emailLogin"],
+                Password = configuration["emailPassword"]
+            };
         }
 
         [HttpGet("/")]
@@ -50,11 +53,11 @@
                 Host = "smtp.gmail.com",
                 Port = 587,
                 EnableSsl = true,
-                Credentials = new NetworkCredential(_emailSecrets.Value.Login, _emailSecrets.Value.Password)
+                Credentials = new NetworkCredential(_emailSecrets.Login, _emailSecrets.Password)
             };
 
             try {
-                using (var message = new MailMessage(_emailSecrets.Value.Login, "kacper.szymczuch@gmail.com") {
+                using (var message = new MailMessage(_emailSecrets.Login, "kacper.szymczuch@gmail.com") {
                     Subject = model.Topic + " - od " + model.Sender,
                     Body = model.Message
                 }) {
