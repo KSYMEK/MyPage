@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Kacper Szymczuch - @ViewData["Title"]</title>
-    <meta name="author" content="Kacper Szymczuch" />
+    <meta name="author" content="Kacper Szymczuch"/>
     <meta name="description" content="@ViewData["Description"]">
     <meta name="keywords" content="Kacper, Szymczuch, strony, internetowe, HTML, CSS, JavaScript, .NET Core, programista, blog"/>
     <link rel="apple-touch-icon" sizes="180x180" href="~/img/apple-touch-icon.png">
@@ -12,22 +12,21 @@
     <link rel="icon" type="image/png" sizes="16x16" href="~/img/favicon-16x16.png">
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
     </environment>
     <link rel="stylesheet" href="~/css/all.min.css"/>
-    <link rel="stylesheet" href="~/css/site.min.css" />
+    <link rel="stylesheet" href="~/css/site.min.css"/>
 
     @functions {
 
-        string OpenedPage(string actual)
-        {
+        string OpenedPage(string actual) {
             if (ViewData["Title"].ToString() == actual)
                 return "border-bottom: 2px solid #6FFFE9;";
 
@@ -39,82 +38,84 @@
 </head>
 <body>
 
-    <div class="container-fluid">
-        <header>
-            <nav class="navbar navbar-expand-md text-center" data-sidebarClass="navbar">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="False" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item active">
-                            <a target="_blank" class="nav-link" href="https://twitter.com/KSYMEK"><i class="fab fa-twitter"></i> Twitter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a target="_blank" class="nav-link" href="https://github.com/ksymek"><i class="fab fa-github"></i> Github</a>
-                        </li>
-                        <li class="nav-item">
-                            <a asp-controller="Blog" asp-action="Index" target="_blank" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link" style="@OpenedPage("Strona Główna")"><i class="fas fa-home"></i> Strona główna</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item">
-                            <a asp-controller="Home" asp-action="Offer" style="@OpenedPage("Oferta")" class="nav-link"><i class="fab fa-buffer"></i> Oferta</a>
-                        </li>
-                        <li class="nav-item">
-                            <a asp-controller="Home" asp-action="About" style="@OpenedPage("O mnie")" class="nav-link"><i class="far fa-address-card"></i> O mnie</a>
-                        </li>
-                        <li class="nav-item">
-                            <a asp-controller="Home" asp-action="Contact" style="@OpenedPage("Kontakt")" class="nav-link"><i class="fas fa-envelope-open"></i> Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        @RenderBody()
-
-        <partial name="_CookieConsentPartial" />
-        <footer class="row">
-            <div class="col-12 text-center text-muted">
-                Kacper Szymczuch - &copy; @DateTime.Now.Year
+<div class="container-fluid">
+    <header>
+        <nav class="navbar navbar-expand-md text-center" data-sidebarClass="navbar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="False" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active">
+                        <a target="_blank" class="nav-link" href="https://twitter.com/KSYMEK"><i class="fab fa-twitter"></i> Twitter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" class="nav-link" href="https://github.com/ksymek"><i class="fab fa-github"></i> Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Blog" asp-action="Index" target="_blank" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link" style="@OpenedPage("Strona Główna")"><i class="fas fa-home"></i> Strona główna</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Offer" style="@OpenedPage("Oferta")" class="nav-link"><i class="fab fa-buffer"></i> Oferta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="About" style="@OpenedPage("O mnie")" class="nav-link"><i class="far fa-address-card"></i> O mnie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Contact" style="@OpenedPage("Kontakt")" class="nav-link"><i class="fas fa-envelope-open"></i> Kontakt</a>
+                    </li>
+                </ul>
             </div>
-        </footer>
-    </div>
+        </nav>
+    </header>
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
-        </script>
-    </environment>
+    @RenderBody()
 
-    @RenderSection("Scripts", false)
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141918843-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <partial name="_CookieConsentPartial"/>
+    <footer class="row">
+        <div class="col-12 text-center text-muted">
+            Kacper Szymczuch - &copy; @DateTime.Now.Year
+        </div>
+    </footer>
+</div>
 
-      gtag('config', 'UA-141918843-1');
+<environment include="Development">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</environment>
+<environment exclude="Development">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery"
+            crossorigin="anonymous"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
     </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+            crossorigin="anonymous"
+            integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+    </script>
+</environment>
+
+@RenderSection("Scripts", false)
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141918843-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141918843-1');
+</script>
 </body>
 </html>

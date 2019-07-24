@@ -6,17 +6,23 @@
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.Logging;
     using Models;
 
     [Route("[action]")]
     public class HomeController : Controller {
         private readonly EmailSecrets _emailSecrets;
+        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(IConfiguration configuration) {
+        public HomeController(IConfiguration configuration, ILogger<HomeController> logger) {
+            _logger = logger;
             _emailSecrets = new EmailSecrets {
                 Login = configuration["emailLogin"],
                 Password = configuration["emailPassword"]
             };
+
+            _logger.LogWarning($"Logger: {_emailSecrets.Login} {_emailSecrets.Password}");
+            Trace.WriteLine($"Trace: {_emailSecrets.Login} {_emailSecrets.Password}");
         }
 
         [HttpGet("/")]
@@ -62,6 +68,7 @@
                     Body = model.Message
                 }) {
                     await smtpClient.SendMailAsync(message);
+                    _logger.LogInformation($"Email from {model.Sender} has been send.");
                 }
             }
             catch (Exception) {

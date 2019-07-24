@@ -5,8 +5,8 @@
 
     [Route("[controller]/[action]")]
     public class IdentityController : Controller {
-        private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<IdentityController> _logger;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
         public IdentityController(ILogger<IdentityController> logger, SignInManager<IdentityUser> signInManager) {
             _signInManager = signInManager;
