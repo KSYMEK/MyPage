@@ -1,4 +1,4 @@
-﻿namespace Client {
+﻿namespace KS.Portfolio {
     using Microsoft.AspNetCore;
     using Microsoft.AspNetCore.Hosting;
 

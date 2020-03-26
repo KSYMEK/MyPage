@@ -1,4 +1,4 @@
-﻿namespace Client.Controllers {
+﻿namespace KS.Portfolio.Controllers {
     using System;
     using System.Diagnostics;
     using System.Net;
@@ -20,9 +20,6 @@
                 Login = configuration["emailLogin"],
                 Password = configuration["emailPassword"]
             };
-
-            _logger.LogWarning($"Logger: {_emailSecrets.Login} {_emailSecrets.Password}");
-            Trace.WriteLine($"Trace: {_emailSecrets.Login} {_emailSecrets.Password}");
         }
 
         [HttpGet("/")]
@@ -63,16 +60,17 @@
             };
 
             try {
-                using (var message = new MailMessage(_emailSecrets.Login, "kacper.szymczuch@gmail.com") {
+                using var message = new MailMessage(_emailSecrets.Login, "kacper.szymczuch@gmail.com")
+                {
                     Subject = model.Topic + " - od " + model.Sender,
                     Body = model.Message
-                }) {
-                    await smtpClient.SendMailAsync(message);
-                    _logger.LogInformation($"Email from {model.Sender} has been send.");
-                }
+                };
+                await smtpClient.SendMailAsync(message);
+                _logger.LogInformation($"Email from {model.Sender} has been send.");
             }
-            catch (Exception) {
-                return RedirectToAction("MessageResponse", new {Powodzenie = true});
+            catch (Exception exception) {
+                _logger.LogError($"Exception {nameof(exception)} in {nameof(HomeController)}: {exception.Message}");
+                return RedirectToAction("MessageResponse", new {Powodzenie = false});
             }
 
             return RedirectToAction("MessageResponse", new {Powodzenie = true});

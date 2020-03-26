@@ -1,4 +1,4 @@
-namespace Client.Models {
+namespace KS.Portfolio.Models {
     public class ErrorViewModel {
         public string RequestId { get; set; }
 
